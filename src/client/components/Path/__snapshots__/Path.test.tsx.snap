@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Path should match snapshot 1`] = `
+<button
+  className="sc-gueYoa hCHzdx"
+  disabled={true}
+  method="get"
+  onClick={[Function]}
+>
+  GET
+</button>
+`;

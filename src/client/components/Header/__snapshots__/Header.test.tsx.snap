@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<div
+  className="sc-dmqHEX ivFeHf"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="sc-gueYoa ggGRkb"
+    >
+      API: 
+    </label>
+    <input
+      className="sc-beqWaB hoAMot"
+      onChange={[Function]}
+      type="text"
+      value="https://petstore.swagger.io/v2/swagger.json"
+    />
+  </form>
+</div>
+`;
