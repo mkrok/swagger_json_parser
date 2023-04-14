@@ -10,7 +10,6 @@ cd swagger_json_parser
 
 npm install
 
-and then open localhost:9591 in your favorite browser
 ### Run
 
 npm start
@@ -19,6 +18,8 @@ npm start
 
 docker build . -t swagger_json_parser
 
-docker run -p port:9591 -d swagger_json_parser
+docker run -p 9591:9591 -d swagger_json_parser
 
-and then open localhost:port in your favorite browser
+### ...and then
+
+open localhost:9591 in your favorite browser
