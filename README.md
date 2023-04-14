@@ -2,23 +2,27 @@
 Yet another swagger.json parser 
 
 
-### Installation
+## Installation
 
+```
 git clone
 
 cd swagger_json_parser
 
 npm install
+```
 
-### Run
+## Run
 
 npm start
 
-### with docker
+## with docker
 
+```
 docker build . -t swagger_json_parser
 
 docker run -p 9591:9591 -d swagger_json_parser
+```
 
 ### ...and then
 
