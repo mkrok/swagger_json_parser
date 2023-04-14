@@ -26,4 +26,4 @@ docker run -p 9591:9591 -d swagger_json_parser
 
 ### ...and then
 
-open localhost:9591 in your favorite browser
+open _localhost:9591_ in your favorite browser
