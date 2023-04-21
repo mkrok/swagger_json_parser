@@ -1,8 +1,6 @@
-import * as React from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useAppData } from '~/client/context/AppStateProvider';
-
-const { useEffect } = React;
 
 const ErrorStyled = styled.div`
   position: fixed;

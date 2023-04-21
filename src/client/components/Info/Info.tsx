@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import { urlParser } from '~/client/functions';
 
@@ -33,7 +32,18 @@ const Link = styled.a`
   margin-bottom: 0.5em;
 `;
 
-const Info = ({ info }) => (
+type InfoProps = {
+  info: {
+    contact: { email: string };
+    description: string;
+    license: { name: string; url: string };
+    termsOfService: string;
+    title: string;
+    version: string;
+  };
+};
+
+const Info = ({ info }: InfoProps) => (
   <InfoStyled>
     <Title>{`${info.title} v.${info.version}`}</Title>
     <Description dangerouslySetInnerHTML={{ __html: urlParser(info.description) }} />

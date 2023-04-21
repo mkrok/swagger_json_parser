@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { KeyboardEvent, MouseEvent, ReactElement } from 'react';
 import styled from 'styled-components';
 
 const ButtonStyled = styled.button`
@@ -13,6 +13,13 @@ const ButtonStyled = styled.button`
   }
 `;
 
-const Button = ({ onClick, text }) => <ButtonStyled onClick={onClick}>{text}</ButtonStyled>;
+type ButtonProps = {
+  onClick?: (event: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>) => void;
+  text: string;
+};
+
+const Button = ({ onClick, text }: ButtonProps): ReactElement => (
+  <ButtonStyled onClick={onClick}>{text}</ButtonStyled>
+);
 
 export default Button;

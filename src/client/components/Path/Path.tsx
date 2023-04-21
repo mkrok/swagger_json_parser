@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 import Button from '~/client/components/Button';
 import { useAppData } from '~/client/context/AppStateProvider';
 import {
@@ -19,9 +19,12 @@ import {
   Title,
 } from './';
 
-const { useEffect, useState } = React;
+type PathProps = {
+  info: any;
+  method: string;
+};
 
-const Path = ({ info, method }) => {
+const Path = ({ info, method }: PathProps) => {
   const [showingDetails, setShowingDetails] = useState(false);
   const [clicked, setClicked] = useState(false);
   const { appData, setAppData } = useAppData();

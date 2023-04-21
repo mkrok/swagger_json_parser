@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import { useAppData } from '~/client/context/AppStateProvider';
 import Tag from '~/client/components/Tag';
@@ -16,12 +15,11 @@ const Wrapper = styled.div`
 
 const Data = () => {
   const { appData } = useAppData();
-  const { transformedTags } = appData;
+  const { tags } = appData;
   return (
     <Wrapper>
-      {transformedTags && <Info info={appData.info} />}
-      {transformedTags &&
-        transformedTags.map((tag, index) => <Tag key={`tag=${index + 1}`} tag={{ ...tag }} />)}
+      {tags && <Info info={appData.info} />}
+      {tags && tags.map((tag, index) => <Tag key={`tag=${index + 1}`} tag={{ ...tag }} />)}
     </Wrapper>
   );
 };

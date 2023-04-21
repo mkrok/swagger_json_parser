@@ -59,7 +59,11 @@ const Url = styled.p`
   font-size: 1em;
 `;
 
-const Tag = ({ tag }) => {
+type TagProps = {
+  tag: any;
+};
+
+const Tag = ({ tag }: TagProps) => {
   return (
     <TagStyle>
       <TagHeader>

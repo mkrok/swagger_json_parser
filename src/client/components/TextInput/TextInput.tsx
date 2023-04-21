@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { ChangeEventHandler } from 'react';
 import styled from 'styled-components';
 
 const TextInputStyled = styled.input`
@@ -14,14 +14,14 @@ const LabelStyled = styled.label`
   margin-right: 0.5em;
 `;
 
-// type TextInputProps = {
-//   disabled?: boolean;
-//   label?: string;
-//   value: string;
-//   onChange?: React.ChangeEventHandler;
-// };
+type TextInputProps = {
+  disabled?: boolean;
+  label?: string;
+  value: string;
+  onChange?: ChangeEventHandler;
+};
 
-const TextInput = ({ label = '', onChange = null, value }) => (
+const TextInput = ({ label = '', onChange = null, value }: TextInputProps) => (
   <>
     <LabelStyled>{label}</LabelStyled>
     <TextInputStyled onChange={onChange} type="text" value={value} />

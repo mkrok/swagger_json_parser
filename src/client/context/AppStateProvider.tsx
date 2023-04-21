@@ -1,21 +1,27 @@
-import * as React from 'react';
-import { appStateType } from './@types.context';
+import { createContext, ReactNode, useContext, useState } from 'react';
+import { AppDataType, AppStateContextInterface } from './@types.context';
 
-const { useState } = React;
-
-const appState: appStateType = {
-  appData: {
-    error: false,
-    errorMessage: '',
-  },
-  setAppData: () => {},
+const initialState = {
+  canWeShowDetails: false,
+  error: false,
+  errorMessage: '',
+  waiting: false,
 };
 
-const AppStateContext = React.createContext(appState);
-const useAppData = () => React.useContext(AppStateContext);
+const appState = {
+  appData: initialState,
+  setAppData: (appData: AppDataType) => {},
+} as AppStateContextInterface;
 
-const AppStateProvider = ({ state = appState, children }) => {
-  const [appData, setAppData] = useState(state);
+const AppStateContext = createContext(appState);
+const useAppData = () => useContext(AppStateContext);
+
+type AppStateProviderProps = {
+  children: ReactNode;
+};
+
+const AppStateProvider = ({ children }: AppStateProviderProps) => {
+  const [appData, setAppData] = useState<AppDataType>(initialState);
   return (
     <AppStateContext.Provider value={{ appData, setAppData }}>{children}</AppStateContext.Provider>
   );
