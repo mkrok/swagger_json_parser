@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from '~/client/components/Header/Header';
 import Data from '~/client/components/Data/Data';

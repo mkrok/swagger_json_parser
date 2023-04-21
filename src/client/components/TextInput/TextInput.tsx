@@ -1,4 +1,4 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const TextInputStyled = styled.input`
@@ -21,11 +21,17 @@ type TextInputProps = {
   onChange?: ChangeEventHandler;
 };
 
-const TextInput = ({ label = '', onChange = null, value }: TextInputProps) => (
-  <>
-    <LabelStyled>{label}</LabelStyled>
-    <TextInputStyled onChange={onChange} type="text" value={value} />
-  </>
-);
+const TextInput = ({ label = '', onChange = null, value }: TextInputProps) => {
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+  return (
+    <>
+      <LabelStyled>{label}</LabelStyled>
+      <TextInputStyled onChange={onChange} ref={inputRef} type="text" value={value} />
+    </>
+  );
+};
 
 export default TextInput;

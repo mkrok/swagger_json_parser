@@ -1,6 +1,6 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import Path from '~/client/components/Path';
+import { TagType } from '~/client/context/@types.context';
 
 const TagStyle = styled.div`
   background-color: #222;
@@ -60,7 +60,7 @@ const Url = styled.p`
 `;
 
 type TagProps = {
-  tag: any;
+  tag: TagType;
 };
 
 const Tag = ({ tag }: TagProps) => {

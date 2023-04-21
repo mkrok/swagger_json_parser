@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import renderHTML from '~/server/renderHtml';
 
 const app = express();

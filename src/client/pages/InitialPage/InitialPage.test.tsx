@@ -1,6 +1,5 @@
-import * as React from 'react';
 import renderer from 'react-test-renderer';
-import InitialPage from './';
+import InitialPage from '.';
 
 describe('InitialPage', () => {
   it('should match snapshot', () => {

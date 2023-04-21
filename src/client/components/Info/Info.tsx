@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { urlParser } from '~/client/functions';
+import { InfoType } from '~/client/context/@types.context';
 
 const InfoStyled = styled.div`
   display: flex;
@@ -33,14 +34,7 @@ const Link = styled.a`
 `;
 
 type InfoProps = {
-  info: {
-    contact: { email: string };
-    description: string;
-    license: { name: string; url: string };
-    termsOfService: string;
-    title: string;
-    version: string;
-  };
+  info: InfoType;
 };
 
 const Info = ({ info }: InfoProps) => (
