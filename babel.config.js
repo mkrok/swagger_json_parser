@@ -7,7 +7,7 @@ module.exports = {
         corejs: '3.30',
       },
     ],
-    '@babel/preset-react',
+    ['@babel/preset-react', { runtime: 'automatic' }],
     '@babel/preset-typescript',
   ],
   plugins: ['@babel/plugin-transform-runtime'],

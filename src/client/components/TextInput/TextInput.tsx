@@ -24,7 +24,9 @@ type TextInputProps = {
 const TextInput = ({ label = '', onChange = null, value }: TextInputProps) => {
   const inputRef = useRef(null);
   useEffect(() => {
-    inputRef.current.focus();
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, []);
   return (
     <>
